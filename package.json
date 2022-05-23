@@ -1,0 +1,20 @@
+{
+  "name": "blank",
+  "version": "1.0.0",
+  "description": "",
+  "source": "index.html",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss style.css -w",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.5.0",
+    "@parcel/transformer-sass": "^2.5.0",
+    "@parcel/transformer-webmanifest": "^2.5.0",
+    "node-sass": "^7.0.1",
+    "parcel": "^2.5.0"
+  }
+}

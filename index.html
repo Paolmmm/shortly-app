@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="URL shortening app" />
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="sass/main.scss" />
+    <script defer src="script.js"></script>
+    <title>shortly by paolm</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <img src="images/logo.svg" alt="logo" class="nav__logo" />
+
+        <input
+          type="checkbox"
+          name="nav-toggle"
+          id="nav-toggle"
+          class="nav__checkbox"
+        />
+        <label class="nav__button" for="nav-toggle"
+          >&nbsp;
+          <span class="btn nav__icon">&nbsp;</span>
+        </label>
+
+        <ul class="nav__list">
+          <li><a class="nav__link" data-link="features">Features</a></li>
+          <li><a href="#" class="nav__link" data-link="pricing">Pricing</a></li>
+          <li><a class="nav__link" data-link="resources">Resources</a></li>
+          <li>
+            <button class="nav__link btn" data-link="login">Login</button>
+          </li>
+          <li>
+            <button class="nav__link btn btn--cta" data-link="sign_up">
+              Sign Up
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <div class="hero">
+        <div class="hero__text">
+          <h1 class="hero__text__title">More than just shorter links</h1>
+          <p class="hero__text__content">
+            Build your brand's recognition and get detailed insights on how your
+            links are performing.
+          </p>
+          <a class="hero__text__btn btn--cta" data-start>Get Started</a>
+        </div>
+
+        <div class="hero__img">
+          <img
+            src="images/illustration-working.svg"
+            alt="person working"
+            class="hero__img__content"
+          />
+        </div>
+      </div>
+    </header>
+    <main class="main" id="main">
+      <form class="form">
+        <input
+          type="url"
+          required
+          name="url"
+          id="url"
+          placeholder="Shorten a link here..."
+          class="form__input"
+        />
+        <button class="form__btn btn btn--cta" type="submit">
+          Shorten it!
+        </button>
+      </form>
+    </main>
+
+    <div class="urls-container"></div>
+
+    <section class="section section--features" id="features">
+      <div class="section--features__title">
+        <h2 class="section--features__header">Advanced Statistics</h2>
+        <p class="section--features__description">
+          Track how your links are performing across the web with our advanced
+          statistics dashboard.
+        </p>
+      </div>
+      <div class="features">
+        <div class="features__feature">
+          <ion-icon class="features__icon" name="bar-chart-outline"></ion-icon>
+          <h3 class="features__header">Brand Recognition</h3>
+          <p class="features__description">
+            Boost your brand recognition with each click. Generic links don't
+            mean a thing. Branded links help instil confidence in your content.
+          </p>
+        </div>
+        <div class="features__feature">
+          <ion-icon
+            class="features__icon"
+            name="speedometer-outline"
+          ></ion-icon>
+          <h3 class="features__header">Detailed Records</h3>
+          <p class="features__description">
+            Gain insights into who is clicking your links. Knowing when and
+            where people engage with your content helps inform better decisions.
+          </p>
+        </div>
+        <div class="features__feature">
+          <ion-icon class="features__icon" name="brush-outline"></ion-icon>
+          <h3 class="features__header">Fully customizable</h3>
+          <p class="features__description">
+            Improve brand awareness and content discoverability through
+            customizable links, supercharging audience engagement.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="section section--cta">
+      <h2 class="section--cta__header">Boost your link today</h2>
+      <a class="btn btn--cta section--cta__btn" data-start> Get Started </a>
+    </section>
+    <footer class="footer">
+      <div class="footer__container">
+        <img src="images/logo.svg" alt="logo" class="footer__logo" />
+
+        <div class="footer__items">
+          <h4 class="footer__header">Features</h4>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Link shortening</a></li>
+            <li><a href="#" class="footer__link">Branded links</a></li>
+            <li><a href="#" class="footer__link">Analytics</a></li>
+          </ul>
+        </div>
+        <div class="footer__items" id="resources">
+          <h4 class="footer__header">Resources</h4>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Blog</a></li>
+            <li><a href="#" class="footer__link">Developers</a></li>
+            <li><a href="#" class="footer__link">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer__items">
+          <h4 class="footer__header">Company</h4>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">About</a></li>
+            <li><a href="#" class="footer__link">Our team</a></li>
+            <li><a href="#" class="footer__link">Careers</a></li>
+            <li><a href="#" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+
+        <ul class="footer__socials">
+          <li>
+            <a href="#" class="footer__social"
+              ><ion-icon name="logo-facebook"></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="footer__social"
+              ><ion-icon name="logo-twitter"></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="footer__social"
+              ><ion-icon name="logo-pinterest"></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="footer__social"
+              ><ion-icon name="logo-instagram"></ion-icon
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
